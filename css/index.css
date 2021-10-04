@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  color: inherit;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+  border-top: 1px dotted #efefef;
+}
+
+img {
+  max-width: 100%;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "n" "i" "m";
+}
+
+@media screen and (min-width: 768px) {
+  .grid-layout {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 20vh 80vh;
+    grid-template-areas: "n n n n n n n i i i i i" "m m m m m m m i i i i i";
+    justify-items: left;
+    background-image: url(/images/bg-pattern-desktop.svg);
+  }
+  .grid-layout .navbar {
+    min-width: 50%;
+    margin: 0 auto;
+    align-self: center;
+  }
+  .grid-layout .navbar nav {
+    padding: 1.5rem 0;
+  }
+  .grid-layout .navbar nav .logo {
+    width: 9rem;
+  }
+  .grid-layout .hero-container .hero-image-mb {
+    display: none;
+  }
+  .grid-layout .hero-container .hero-image-dt {
+    display: inline;
+    min-height: 100vh;
+    object-fit: cover;
+  }
+  .grid-layout .main {
+    text-align: left;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  .grid-layout .main .heading {
+    font-size: 3.5rem;
+  }
+  .grid-layout .main .form #error {
+    padding: 0.8rem;
+  }
+}
+.navbar {
+  grid-area: n;
+  min-width: 80%;
+}
+.navbar nav {
+  padding: 1.5rem 2rem;
+}
+.navbar nav .logo {
+  width: 7rem;
+}
+
+.hero-container {
+  grid-area: i;
+}
+.hero-container .hero-image-mb {
+  min-width: 100%;
+  vertical-align: bottom;
+}
+.hero-container .hero-image-dt {
+  display: none;
+  vertical-align: bottom;
+}
+
+.main {
+  grid-area: m;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 4rem 0;
+  text-align: center;
+}
+.main .heading {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  letter-spacing: 12px;
+  color: #413a3a;
+  padding-bottom: 0.5rem;
+  line-height: 1.1;
+}
+.main .heading span {
+  font-weight: 300;
+  color: #ce9797;
+}
+.main .text {
+  color: #ce9797;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.form {
+  padding: 2rem;
+  position: relative;
+  margin: 0 auto;
+}
+.form .email {
+  min-width: 100%;
+  height: 3.1rem;
+  color: #f96262;
+  opacity: 50%;
+  font-family: "Josefin Sans", sans-serif;
+  padding-left: 1.5rem;
+  outline: none;
+  border-radius: 3rem;
+  position: absolute;
+  left: 0;
+}
+.form .email:focus {
+  border: 3px solid #ce9797;
+}
+.form .form-button {
+  position: absolute;
+  padding: 1em 2em;
+  right: 0;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  cursor: pointer;
+  box-shadow: 0px 8px 15px #ce9797;
+  width: 65px;
+}
+.form #error {
+  position: absolute;
+  right: 5rem;
+  padding: 0.8rem 0;
+  display: none;
+}
+
+.error-msg {
+  color: #f96262;
+  font-size: 0.75rem;
+  position: relative;
+  padding: 3.5rem 0;
+}
+
+.form .email {
+  border: 1px solid #ce9797;
+  background-color: transparent;
+}
+.form .form-button {
+  transition: width 0.3s;
+  transition-timing-function: ease;
+}
+.form .form-button:hover {
+  opacity: 0.8;
+  box-shadow: 0px 8px 7px #ce9797;
+  width: 90px;
+  transition: 0.3s;
+}
+.form .form-button:not(:hover) {
+  transition: 0.3s;
+}

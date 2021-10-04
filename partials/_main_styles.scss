@@ -1,0 +1,58 @@
+// nav styles
+
+.navbar {
+  grid-area: n;
+  min-width: 80%;
+
+  nav {
+    padding: $base-padding * 1.5 $base-padding * 2;
+
+    .logo {
+      width: 7rem;
+    }
+  }
+}
+
+// image styles
+.hero-container {
+  grid-area: i;
+
+  .hero-image-mb {
+    min-width: 100%;
+    vertical-align: bottom;
+  }
+
+  .hero-image-dt {
+    display: none;
+    vertical-align: bottom;
+  }
+}
+
+// main content styles
+.main {
+  grid-area: m;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: $base-padding * 4 0;
+  text-align: center;
+
+  .heading {
+    text-transform: uppercase;
+    font-size: $base-font-size * 2.5;
+    letter-spacing: 12px;
+    color: $neutral-gray-red;
+    padding-bottom: $base-padding * 0.5;
+    line-height: 1.1;
+
+    span {
+      font-weight: 300;
+      color: $primary-red;
+    }
+  }
+
+  .text {
+    color: $primary-red;
+    font-size: $base-font-size * 0.875;
+    line-height: 1.6;
+  }
+}

@@ -1,0 +1,10 @@
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "n"
+    "i"
+    "m";
+}
+

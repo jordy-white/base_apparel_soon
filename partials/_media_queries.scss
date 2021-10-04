@@ -1,0 +1,56 @@
+@media screen and (min-width: 768px) {
+  .grid-layout {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 20vh 80vh;
+    grid-template-areas:
+      "n n n n n n n i i i i i"
+      "m m m m m m m i i i i i";
+    justify-items: left;
+    // background
+    background-image: url(/images/bg-pattern-desktop.svg);
+
+    .navbar {
+      min-width: 50%;
+      margin: 0 auto;
+      align-self: center;
+
+      nav {
+        padding: $base-padding * 1.5 0;
+
+        .logo {
+          width: 9rem;
+        }
+      }
+    }
+
+    .hero-container {
+      .hero-image-mb {
+        display: none;
+      }
+
+      .hero-image-dt {
+        display: inline;
+        min-height: 100vh;
+        object-fit: cover;
+      }
+    }
+
+    .main {
+      text-align: left;
+      max-width: 50%;
+      margin: 0 auto;
+
+      .heading {
+        font-size: $base-font-size * 3.5;
+      }
+
+      .form {
+        #error {
+          padding: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+// see if the navbar and main content can be aligned (at dt size) with less code (at the moment it is kinda strange having max-widths in both mb and dt view, changed in dt to 60%. Perhaps there's code that can be implemented at the mb view?

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <!-- CONTENT -->
+  <body class="grid-layout">
+    <!-- navbar -->
+    <header class="navbar">
+      <nav>
+        <img src="/images/logo.svg" alt="Logo" class="logo" />
+      </nav>
+    </header>
+
+    <!-- hero image -->
+    <figure class="hero-container">
+      <img
+        src="/images/hero-mobile.jpg"
+        alt="Girl posing"
+        class="hero-image-mb"
+      />
+      <img
+        src="/images/hero-desktop.jpg"
+        alt="Girl posing"
+        class="hero-image-dt"
+      />
+    </figure>
+
+    <!-- main section -->
+    <main class="main">
+      <h1 class="heading"><span>we're</span> coming soon</h1>
+      <p class="text">
+        Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our
+        launch deals.
+      </p>
+      <!-- form -->
+      <form id="form" action="" for="email" class="form">
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Email Address"
+          class="email"
+        />
+        <!-- button -->
+        <button class="form-button" type="submit">
+          <img
+            src="/images/icon-arrow.svg"
+            class="submit"
+            onclick="validateEmail()"
+          />
+        </button>
+        <img id="error" src="/images/icon-error.svg" />
+        <span class="error-msg"></span>
+      </form>
+    </main>
+
+    <!-- javascript email validation -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
