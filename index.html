@@ -20,7 +20,7 @@
     <!-- navbar -->
     <header class="navbar">
       <nav>
-        <img src="/images/logo.svg" alt="Logo" class="logo" />
+        <img src="/images/logo.svg" alt="logo" class="logo" />
       </nav>
     </header>
 
@@ -28,12 +28,13 @@
     <figure class="hero-container">
       <img
         src="/images/hero-mobile.jpg"
-        alt="Girl posing"
+        alt="girl posing"
         class="hero-image-mb"
       />
+
       <img
         src="/images/hero-desktop.jpg"
-        alt="Girl posing"
+        alt="girl posing"
         class="hero-image-dt"
       />
     </figure>
@@ -47,7 +48,7 @@
         launch deals.
       </p>
       <!-- form -->
-      <form id="form" action="" for="email" class="form">
+      <form id="form" class="form">
         <input
           type="email"
           id="email"
@@ -56,10 +57,15 @@
           class="email"
         />
         <!-- button -->
-        <button class="form-button" type="submit" class="submit">
-          <img src="/images/icon-arrow.svg" />
+        <button
+          class="form-button"
+          type="submit"
+          aria-label="form"
+          class="submit"
+        >
+          <img src="/images/icon-arrow.svg" alt="submit icon" />
         </button>
-        <img id="error" src="/images/icon-error.svg" />
+        <img id="error" src="/images/icon-error.svg" alt="error icon" />
         <span class="error-msg"></span>
       </form>
     </main>
