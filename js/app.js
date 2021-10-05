@@ -5,6 +5,9 @@ const errorLogo = document.getElementById("error");
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 const validateEmail = (e) => {
+  // prevent reloading
+  e.preventDefault();
+
   if (input.value.match(emailRegex)) {
     // valid
     errorMessage.innerHTML = "";
@@ -16,5 +19,5 @@ const validateEmail = (e) => {
   }
 };
 
-// listen for click: not working
+// event listern
 submit.addEventListener("click", validateEmail);
